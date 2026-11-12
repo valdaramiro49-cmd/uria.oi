@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urea boliviana hacia Paraguay | Tablero 2026</title>
+<style>
+:root{--bg:#07101f;--bg2:#0d1b33;--card:rgba(20,36,66,.72);--line:rgba(120,160,220,.22);--tx:#eef3fb;--mu:#9fb2cf;--am:#f5a524;--gr:#3ddc97;--tl:#2ec4d6;--rd:#ff6b6b;--bl:#5b9bff;--sans:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--ser:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 78% -5%,#12305a 0,transparent 60%),radial-gradient(900px 600px at -10% 40%,#0b2a3a 0,transparent 55%),var(--bg);color:var(--tx);font:16px/1.55 var(--sans);min-height:100vh}
+.wrap{max-width:1240px;margin:auto;padding:0 24px}
+h1,h2{font-family:var(--ser);font-weight:700;letter-spacing:-.01em}
+h1{font-size:clamp(28px,3.6vw,46px);line-height:1.12}
+h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:6px}
+p.sub{color:var(--mu);max-width:62ch;margin-bottom:22px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;padding:44px 0 20px}
+.chips{display:flex;gap:10px;margin:18px 0 26px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:99px;padding:5px 14px;color:var(--mu);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;backdrop-filter:blur(8px);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.kpi b{display:block;font:700 clamp(26px,3vw,38px)/1.1 var(--ser)}
+.kpi span{color:var(--mu);font-size:14px}
+.kpi:nth-child(1) b{color:var(--gr)}.kpi:nth-child(2) b{color:var(--tl)}.kpi:nth-child(3) b{color:var(--am)}.kpi:nth-child(4) b{color:var(--rd)}
+#map{width:100%;height:auto;filter:drop-shadow(0 20px 50px rgba(46,196,214,.18))}
+.arc{fill:none;stroke-linecap:round;stroke-dasharray:6 10;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.pulse{animation:pl 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pl{from{transform:scale(.6);opacity:.9}to{transform:scale(3.2);opacity:0}}
+section{padding:46px 0 8px}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:1.4fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;backdrop-filter:blur(8px);box-shadow:0 16px 46px rgba(0,0,0,.35)}
+.card h3{font-size:18px;margin-bottom:12px}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{font:inherit;color:var(--mu);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:7px 14px;cursor:pointer}
+.tabs button:hover{color:var(--tx)}.tabs button[aria-pressed=true]{background:linear-gradient(135deg,#1b6fd6,#2ec4d6);color:#fff;border-color:transparent}
+button:focus-visible,input:focus-visible,.risk:focus-visible{outline:2px solid var(--am);outline-offset:2px}
+svg text{fill:var(--mu);font:13px var(--sans)}
+.bar{transform-box:fill-box;transform-origin:bottom;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleY(0)}}
+.note{margin-top:12px;color:var(--mu);font-size:14px}.note b{color:var(--tx)}
+.big{font:700 46px/1 var(--ser)}
+input[type=range]{width:100%;accent-color:var(--tl);margin:6px 0 10px}
+.calc{background:rgba(0,0,0,.25);border:1px dashed var(--line);border-radius:14px;padding:12px 14px;font-size:15px}
+.stk{display:flex;height:26px;border-radius:8px;overflow:hidden;margin:4px 0 2px;background:#0003}.stk i{display:block;height:100%}
+.row{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;margin-bottom:12px;font-size:14px}.row small{color:var(--mu);display:block;margin-top:2px}
+.leg{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mu);margin-top:6px}.leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.months{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin:10px 0}.months div{text-align:center;font-size:12px;padding:8px 0;border-radius:8px;background:rgba(255,255,255,.05);color:var(--mu)}.months .dry{background:linear-gradient(#ff6b6b,#b3402f);color:#fff;font-weight:600}
+.pb{display:flex;align-items:flex-end;gap:10px;height:110px;margin-top:8px}.pb div{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(#3ddc97,#157a55);position:relative;box-shadow:inset 6px 0 10px rgba(255,255,255,.18)}.pb span{position:absolute;top:-20px;width:100%;text-align:center;font-size:12px;color:var(--tx)}.pb em{position:absolute;bottom:-20px;width:100%;text-align:center;font-style:normal;font-size:12px;color:var(--mu)}
+.mx{display:grid;grid-template-columns:70px repeat(2,1fr);gap:8px}.mx>div{min-height:84px;border-radius:12px;background:rgba(255,255,255,.04);padding:6px;display:flex;flex-wrap:wrap;gap:6px;align-content:center;justify-content:center}.mx .h{min-height:0;background:none;font-size:13px;color:var(--mu);align-items:center}
+.risk{font:inherit;font-size:13px;border:0;border-radius:99px;padding:6px 11px;cursor:pointer;color:#0a1426;font-weight:600}.risk.Alto{background:var(--rd)}.risk.Medio-Alto{background:var(--am)}.risk.Medio{background:#f2d14b}
+.risk[aria-pressed=true]{box-shadow:0 0 0 3px #fff8}
+.cc{display:grid;gap:10px}.cc details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px 16px}.cc summary{cursor:pointer;font-weight:600}.cc p{color:var(--mu);margin-top:8px}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tl>div{border-top:4px solid var(--c);background:rgba(255,255,255,.04);border-radius:0 0 16px 16px;padding:14px 16px;font-size:15px}.tl h4{color:var(--c);margin-bottom:8px;font-size:17px}.tl li{margin:0 0 8px 18px;color:var(--tx)}
+.quote{margin:60px 0 0;padding:70px 0;text-align:center;background:linear-gradient(180deg,transparent,#0a2540 60%,#07101f)}
+.quote blockquote{font:700 clamp(24px,3.2vw,40px)/1.25 var(--ser);max-width:26em;margin:auto}
+.quote p{margin-top:26px;color:var(--mu)}
+footer{padding:26px 0 40px;color:var(--mu);font-size:13px;text-align:center}
+@media(max-width:900px){.hero,.g2,.g3,.tl{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div>
+    <div class="chips"><span class="chip">Monografía 2026</span><span class="chip">N.A.V.N.</span><span class="chip">HS 310210</span></div>
+    <h1>Inteligencia de mercados internacionales mediante herramientas de inteligencia artificial para la consolidación de las exportaciones de urea boliviana hacia Paraguay</h1>
+    <p class="sub" style="margin-top:16px">Bolivia pasó de cero envíos a liderar el mercado paraguayo de urea. Este tablero muestra cómo, a qué precio y con qué riesgos.</p>
+    <div class="kpis">
+      <div class="kpi"><b data-n="62967">0</b><span>toneladas exportadas a Paraguay en 2024</span></div>
+      <div class="kpi"><b data-n="15.3" data-d="1" data-p="USD " data-s=" M">0</b><span>valor exportado en 2024</span></div>
+      <div class="kpi"><b data-n="69.8" data-d="1" data-s=" %">0</b><span>del valor que Paraguay importó de urea</span></div>
+      <div class="kpi"><b data-n="-58" data-s=" %">0</b><span>caída del valor por tonelada (2022 a 2024)</span></div>
+    </div>
+  </div>
+  <svg id="map" viewBox="0 0 480 690" role="img" aria-label="Mapa esquemático de los destinos de la urea boliviana"></svg>
+</header>
+
+<section>
+  <h2>La urea despega por volumen, no por precio</h2>
+  <p class="sub">Entre 2022 y 2024 el volumen se multiplicó por 56, pero cada tonelada se vendió a menos de la mitad.</p>
+  <div class="grid g2">
+    <div class="card"><div class="tabs" id="evTabs"></div><svg id="ev" viewBox="0 0 620 310" width="100%"></svg></div>
+    <div class="card"><h3>Qué dicen los datos</h3><div class="big" id="evBig"></div><p class="note" id="evTxt"></p>
+      <p class="note">Fuente: Trade Map (s. f.), HS 310210. Valor unitario = valor exportado ÷ volumen.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Bolivia alcanzó a Brasil en 2023</h2>
+  <p class="sub">Mueve el año para ver cómo se calcula la participación en el valor que Paraguay importa.</p>
+  <div class="grid g2">
+    <div class="card"><svg id="pt" viewBox="0 0 560 270" width="100%"></svg><div class="leg"><span><i style="background:var(--gr)"></i>Bolivia</span><span><i style="background:var(--am)"></i>Brasil</span></div></div>
+    <div class="card"><h3>Cómo se calcula (Figura 3.3)</h3>
+      <div style="display:flex;gap:16px;align-items:center"><svg id="dn" viewBox="0 0 140 140" width="130"></svg><div><b id="yr" style="font:700 30px var(--ser)"></b><div class="leg" style="margin:0;flex-direction:column;gap:2px"><span id="lb"></span><span id="lr"></span><span id="lo"></span></div></div></div>
+      <input type="range" id="sl" min="0" max="3" value="3" aria-label="Año">
+      <div class="calc" id="cl"></div>
+      <p class="note">Total = suma de proveedores del año, sin «European Union». Fuente: WITS, UN Comtrade (Tabla A.1).</p></div>
+  </div>
+  <div class="card" style="margin-top:18px"><h3>Quién abastece a Paraguay (miles de USD)</h3><div id="cp"></div>
+    <div class="leg"><span><i style="background:var(--gr)"></i>Bolivia</span><span><i style="background:var(--am)"></i>Brasil</span><span><i style="background:var(--bl)"></i>Otro proveedor destacado</span></div></div>
+</section>
+
+<section>
+  <h2>Lo que impulsa y lo que frena</h2>
+  <p class="sub">Arancel cero y una planta que se recuperó, frente a una logística que depende de la carretera.</p>
+  <div class="grid g3">
+    <div class="card"><h3>Producción de Bulo Bulo</h3><div class="pb" id="pb"></div><p class="note" style="margin-top:30px">Producción ×3,3 entre 2021 y 2024. Arancel <b>0 %</b> por el ACE 36. Capacidad nominal: 2.100 t/día.</p></div>
+    <div class="card"><h3>Cómo viaja la urea</h3><div style="display:flex;align-items:center;gap:14px"><svg id="rd" viewBox="0 0 140 140" width="140"></svg><p class="note" style="margin:0">En 2024, el <b>87,6 %</b> del volumen exportado a Paraguay fue por carretera y el 12,1 % por vía fluvial (2,9 % del valor).</p></div>
+      <h3 style="margin-top:18px">Estiaje de la Hidrovía</h3><div class="months" id="mo"></div></div>
+    <div class="card"><h3>A dónde va la urea boliviana (2024)</h3><div id="ds"></div><p class="note">Brasil concentra el 66,8 % y Paraguay solo recibe el 12,0 %: riesgo de concentración y oportunidad de diversificar.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Seis riesgos, tres de nivel alto</h2>
+  <p class="sub">Toca un riesgo para ver el dato que lo respalda.</p>
+  <div class="grid g2"><div class="card"><div class="mx" id="mx"></div></div><div class="card"><h3 id="rt">Selecciona un riesgo</h3><p class="note" id="rb"></p><div class="leg"><span><i style="background:var(--rd)"></i>Alto</span><span><i style="background:var(--am)"></i>Medio-Alto</span><span><i style="background:#f2d14b"></i>Medio</span></div></div></div>
+</section>
+
+<section>
+  <h2>Conclusiones y recomendaciones</h2>
+  <div class="tabs" id="ct"></div><div id="cv"></div>
+</section>
+</div>
+
+<div class="quote"><div class="wrap"><blockquote>La consolidación exportadora no se hereda de los recursos naturales: se construye dominando la logística y ejecutando una precisa inteligencia de mercados.</blockquote><p>Defensa de monografía 2026 · N.A.V.N.</p></div></div>
+<footer class="wrap">Fuentes: Trade Map, WITS (UN Comtrade), IBCE, YPFB, ALADI y FAO. La inteligencia artificial organizó la información; las cifras se validaron en las fuentes oficiales. Mapa esquemático, sin escala.</footer>
+
+<script>
+const $=s=>document.querySelector(s),NS='http://www.w3.org/2000/svg';
+const f=(n,d=0)=>n.toFixed(d).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+const fm=(n,d=0)=>{let [a,b]=n.toFixed(d).split('.');a=a.replace(/\B(?=(\d{3})+(?!\d))/g,'.');return b?a+','+b:a};
+const Y5=['2020','2021','2022','2023','2024'];
+
+/* KPIs */
+document.querySelectorAll('[data-n]').forEach(e=>{const t=+e.dataset.n,d=+(e.dataset.d||0),p=e.dataset.p||'',s=e.dataset.s||'';let k=0;const go=()=>{k=Math.min(1,k+.03);e.textContent=p+fm(t*(1-Math.pow(1-k,3)),d)+s;if(k<1)requestAnimationFrame(go)};go()});
+
+/* Mapa de puntos */
+const inP=(x,y,P)=>{let c=false;for(let i=0,j=P.length-1;i<P.length;j=i++){const[a,b]=P[i],[m,n]=P[j];if((b>y)!=(n>y)&&x<(m-a)*(y-b)/(n-b)+a)c=!c}return c};
+const SA=[[-77,8],[-72,12],[-63,10.7],[-58,6.5],[-51,4.5],[-50,0],[-44,-2.5],[-35,-5.5],[-35,-9],[-39,-14],[-39,-18],[-41,-22],[-48,-26],[-48.5,-28.5],[-53,-34],[-58,-34.5],[-57,-38],[-62,-39],[-65,-41],[-64,-45],[-67.5,-46.5],[-66,-48],[-69,-51],[-68.5,-54.5],[-72,-53],[-75,-47],[-73.5,-40],[-72,-33],[-71.5,-28],[-70.3,-18.5],[-75,-15],[-79,-8],[-81,-4.5],[-80,0],[-78,2]];
+const BO=[[-69.6,-10.9],[-65.3,-9.7],[-60.5,-13.5],[-58.2,-16.3],[-58.4,-19.8],[-62.3,-22],[-64.4,-22.8],[-67.3,-22.9],[-68.4,-21.5],[-69.1,-18],[-69.6,-14.5]];
+const PY=[[-62.6,-22.2],[-58.2,-19.8],[-57.8,-22.1],[-55.7,-22.2],[-54.3,-24],[-54.6,-25.6],[-56,-27.5],[-58.6,-27.3],[-60,-24]];
+const px=(lo,la)=>[(lo+82)/48*480,(13-la)/69*690];
+const cls=(x,y)=>inP(x,y,BO)?'bo':inP(x,y,PY)?'py':(y<-0.5&&y>-18.3&&x<-69.5)?'pe':(y<=-18.3&&x<(y>-30?-68.6:-70.3))?'ch':(x>-69.5&&y<4.5&&y>-12)||(x>-58.3&&y<5)?'br':y<-21.8?'ar':'';
+const COL={bo:'#f5a524',py:'#3ddc97',br:'#b8742a',ar:'#4a78c8',pe:'#4a78c8',ch:'#4a78c8','':'#1d3558'};
+let m='<defs><radialGradient id="gl"><stop offset="0" stop-color="#f5a524" stop-opacity=".5"/><stop offset="1" stop-color="#f5a524" stop-opacity="0"/></radialGradient></defs>';
+const [bx,by]=px(-64.4,-17.4);m+=`<circle cx="${bx}" cy="${by}" r="70" fill="url(#gl)"/>`;
+for(let la=12;la>-55;la-=1.15)for(let lo=-81;lo<-34;lo+=1.15){if(!inP(lo,la,SA))continue;const c=cls(lo,la),[x,y]=px(lo,la);m+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${c==='bo'||c==='py'?3.5:2.8}" fill="${COL[c]}" opacity="${c?1:.55}"/>`}
+const D=[['Brasil',-47,-23.5,66.8,'#f5a524',-60],['Argentina',-58.4,-34.6,15.8,'#5b9bff',60],['Paraguay',-57.6,-25.3,12,'#3ddc97',-30],['Perú',-77,-12,5.3,'#9b8cff',-40],['Chile',-70.6,-33.4,.1,'#2ec4d6',50]];
+D.forEach(([n,lo,la,v,c,o])=>{const[x,y]=px(lo,la),mx=(bx+x)/2+o,my=(by+y)/2-Math.abs(o)*.6;m+=`<path class="arc" d="M${bx} ${by}Q${mx} ${my} ${x} ${y}" stroke="${c}" stroke-width="${Math.max(1.5,Math.sqrt(v)*.9)}"><title>${n}: ${fm(v,1)} % del valor exportado (2024)</title></path><circle cx="${x}" cy="${y}" r="5" fill="${c}"/><text x="${x+8}" y="${y+4}" style="fill:#eef3fb;font-weight:600">${n} ${fm(v,1)} %</text>`});
+m+=`<circle class="pulse" cx="${bx}" cy="${by}" r="7" fill="#f5a524"/><circle cx="${bx}" cy="${by}" r="6" fill="#fff"/><text x="${bx-30}" y="${by-14}" style="fill:#fff;font-weight:700">Bulo Bulo</text>`;
+$('#map').innerHTML=m;
+
+/* Evolución */
+const MO={vol:['Volumen (t)',[0,0,1122,26478,62967],0,'#3ddc97','×56','El volumen pasó de 1.122 t (2022) a 62.967 t (2024). Sin envíos en 2020 y 2021.'],val:['Valor (miles de USD)',[0,0,648.85,9613.25,15299.45],2,'#2ec4d6','×24','El valor creció de USD 648,85 mil a 15.299,45 mil: menos que el volumen porque el precio bajó.'],uni:['Valor unitario (USD/t)',[0,0,578,363,243],0,'#f5a524','−58 %','Cada tonelada pasó de USD 578 a 243, el menor margen para cubrir fletes y seguros.']};
+let cur='vol';
+function ev(){const[l,v,d,c,b,t]=MO[cur],mx=Math.max(...v);let s=`<defs><linearGradient id="bg1" x1="0" x2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="${c}" stop-opacity=".55"/></linearGradient></defs>`;
+for(let i=0;i<5;i++){const h=v[i]/mx*210,x=40+i*115,y=250-h;s+=v[i]?`<g class="bar"><rect x="${x}" y="${y}" width="74" height="${h}" rx="6" fill="url(#bg1)"/><rect x="${x}" y="${y}" width="14" height="${h}" rx="6" fill="#fff" opacity=".22"/><ellipse cx="${x+37}" cy="${y}" rx="37" ry="7" fill="#fff" opacity=".28"/><title>${Y5[i]}: ${fm(v[i],d)}</title></g><text x="${x+37}" y="${y-14}" text-anchor="middle" style="fill:#eef3fb;font-weight:600">${fm(v[i],d)}</text>`:`<text x="${x+37}" y="244" text-anchor="middle">${cur==='uni'?'—':'0'}</text>`;s+=`<text x="${x+37}" y="278" text-anchor="middle">${Y5[i]}</text>`}
+$('#ev').innerHTML=s+`<line x1="20" x2="600" y1="251" y2="251" stroke="#2a3a5c"/>`;$('#evBig').textContent=b;$('#evBig').style.color=c;$('#evTxt').textContent=t;
+$('#evTabs').innerHTML=Object.entries(MO).map(([k,a])=>`<button aria-pressed="${k===cur}" data-k="${k}">${a[0]}</button>`).join('');$('#evTabs').querySelectorAll('button').forEach(e=>e.onclick=()=>{cur=e.dataset.k;ev()})}
+ev();
+
+/* Participación */
+const YR=[2021,2022,2023,2024],BP=[0,4.1,49.8,69.8],RP=[91.1,94.7,49.5,29.1],TT=[14938.56,15751.74,19313.03,21917.98],BV=[0,648.85,9613.25,15299.45],RV=[13616.03,14912.71,9556.74,6380.83];
+const X=i=>50+i*150,Yy=v=>235-v*2;let pt='';
+[0,25,50,75,100].forEach(v=>pt+=`<line x1="40" x2="520" y1="${Yy(v)}" y2="${Yy(v)}" stroke="#2a3a5c" stroke-width=".7"/><text x="8" y="${Yy(v)+4}">${v}%</text>`);
+const path=a=>a.map((v,i)=>`${i?'L':'M'}${X(i)} ${Yy(v)}`).join('');
+pt+=`<defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3ddc97" stop-opacity=".4"/><stop offset="1" stop-color="#3ddc97" stop-opacity="0"/></linearGradient></defs><path d="${path(BP)}L${X(3)} 235L${X(0)} 235Z" fill="url(#ar)"/><path d="${path(BP)}" fill="none" stroke="#3ddc97" stroke-width="3.5" stroke-linecap="round"/><path d="${path(RP)}" fill="none" stroke="#f5a524" stroke-width="3.5" stroke-linecap="round"/>`;
+YR.forEach((y,i)=>pt+=`<text x="${X(i)}" y="258" text-anchor="middle">${y}</text><circle cx="${X(i)}" cy="${Yy(BP[i])}" r="5" fill="#3ddc97"><title>Bolivia ${y}: ${fm(BP[i],1)} %</title></circle><circle cx="${X(i)}" cy="${Yy(RP[i])}" r="5" fill="#f5a524"><title>Brasil ${y}: ${fm(RP[i],1)} %</title></circle>`);
+$('#pt').innerHTML=pt+`<line id="cur" y1="20" y2="235" stroke="#fff" stroke-dasharray="4 5" opacity=".6"/>`;
+function pr(){const i=+$('#sl').value,o=100-BP[i]-RP[i],C=2*Math.PI*50;let a=0,g='<circle cx="70" cy="70" r="50" fill="none" stroke="#1d3558" stroke-width="18"/>';
+[[BP[i],'#3ddc97'],[RP[i],'#f5a524'],[o,'#5b9bff']].forEach(([v,c])=>{g+=`<circle cx="70" cy="70" r="50" fill="none" stroke="${c}" stroke-width="18" stroke-dasharray="${v/100*C} ${C}" stroke-dashoffset="${-a/100*C}" transform="rotate(-90 70 70)"/>`;a+=v});
+$('#dn').innerHTML=g;$('#yr').textContent=YR[i];$('#lb').textContent='Bolivia '+fm(BP[i],1)+' %';$('#lr').textContent='Brasil '+fm(RP[i],1)+' %';$('#lo').textContent='Otros '+fm(Math.max(o,0),1)+' %';
+$('#cl').innerHTML=`Bolivia: ${fm(BV[i],2)} ÷ ${fm(TT[i],2)} × 100 = <b>${fm(BP[i],1)} %</b><br>Brasil: ${fm(RV[i],2)} ÷ ${fm(TT[i],2)} × 100 = <b>${fm(RP[i],1)} %</b>`;$('#cur').setAttribute('x1',X(i));$('#cur').setAttribute('x2',X(i))}
+$('#sl').oninput=pr;pr();
+const OT=[['Rusia',1225.5],['Egipto',89.25],['China',101.22],['Turquía',172.51]];
+$('#cp').innerHTML=YR.map((y,i)=>{const t=BV[i]+RV[i]+OT[i][1];return `<div class="row"><b>${y}</b><div><div class="stk"><i style="width:${BV[i]/t*100}%;background:var(--gr)" title="Bolivia ${fm(BV[i],2)}"></i><i style="width:${RV[i]/t*100}%;background:var(--am)" title="Brasil ${fm(RV[i],2)}"></i><i style="width:${OT[i][1]/t*100}%;background:var(--bl)" title="${OT[i][0]} ${fm(OT[i][1],2)}"></i></div><small>Bolivia ${fm(BV[i],2)} · Brasil ${fm(RV[i],2)} · ${OT[i][0]} ${fm(OT[i][1],2)}</small></div></div>`}).join('');
+
+/* Logística y destinos */
+$('#pb').innerHTML=[['2021',158000],['2022',364600],['2023',347300],['2024',525600]].map(([y,v])=>`<div style="height:${v/525600*100}%"><span>${fm(v)}</span><em>${y}</em></div>`).join('');
+{const C=2*Math.PI*50;$('#rd').innerHTML=`<circle cx="70" cy="70" r="50" fill="none" stroke="#2ec4d6" stroke-width="18"/><circle cx="70" cy="70" r="50" fill="none" stroke="#f5a524" stroke-width="18" stroke-dasharray="${.876*C} ${C}" transform="rotate(-90 70 70)"/><text x="70" y="76" text-anchor="middle" style="fill:#eef3fb;font:700 22px var(--ser)">87,6 %</text>`}
+$('#mo').innerHTML='ene feb mar abr may jun jul ago sep oct nov dic'.split(' ').map((a,i)=>`<div class="${i>=8&&i<=10?'dry':''}">${a}</div>`).join('');
+$('#ds').innerHTML=D.map(([n,,,v,c])=>`<div class="row" style="grid-template-columns:78px 1fr"><b>${n}</b><div><div class="stk"><i style="width:${Math.max(v,.8)}%;background:${c}"></i></div><small>${fm(v,1)} %</small></div></div>`).join('');
+
+/* Riesgos */
+const R=[['Estiaje de la Hidrovía','Alta','Alto','Alto','Estiaje de septiembre a noviembre.'],['Regreso de competidores','Media','Alto','Medio-Alto','Brasil tuvo 94,7 % del valor en 2022 y 29,1 % en 2024.'],['Dependencia de pocos mercados','Alta','Alto','Alto','Brasil 66,8 % y Paraguay 12,0 % del valor exportado en 2024.'],['Caída de producción','Media','Muy alto','Alto','Planta parada de noviembre de 2019 a septiembre de 2021.'],['Prioridad del mercado interno','Media','Alto','Medio-Alto','YPFB debe cubrir el consumo nacional antes de exportar.'],['Variación de precios','Media','Medio','Medio','Valor por tonelada de USD 578 (2022) a 243 (2024).']];
+let h='<div class="h"></div><div class="h">Probabilidad media</div><div class="h">Probabilidad alta</div>';
+['Muy alto','Alto','Medio'].forEach(im=>{h+=`<div class="h">Impacto ${im.toLowerCase()}</div>`;['Media','Alta'].forEach(p=>{h+='<div>'+R.map((r,i)=>r[1]===p&&r[2]===im?`<button class="risk ${r[3]}" data-i="${i}" aria-pressed="false">${r[0]}</button>`:'').join('')+'</div>'})});
+$('#mx').innerHTML=h;$('#mx').querySelectorAll('.risk').forEach(b=>b.onclick=()=>{document.querySelectorAll('.risk').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');const r=R[b.dataset.i];$('#rt').textContent=r[0]+' (riesgo '+r[3].toLowerCase()+')';$('#rb').textContent='Probabilidad '+r[1].toLowerCase()+', impacto '+r[2].toLowerCase()+'. '+r[4]});
+
+/* Conclusiones */
+const CO=[['Expansión, no consolidación plena','Bolivia pasó de 0 a proveedor relevante en tres años, pero un crecimiento tan reciente aún no demuestra estabilidad.'],['Crecimiento por volumen, no por precio','El valor unitario cayó 58 %. La rentabilidad depende de controlar los costos logísticos.'],['Liderazgo vulnerable','69,8 % del valor importado por Paraguay en 2024; puede revertirse si la competencia vuelve con precios más bajos.'],['Factores condicionantes','Favorecen el ACE 36, la producción de Bulo Bulo y la Hidrovía. Riesgos: estiaje, mercado interno y dependencia de Brasil.'],['Aporte de la inteligencia de mercados y la IA','Ordenó datos, comparó proveedores e identificó riesgos; es apoyo a la decisión, no un efecto comercial demostrado.']];
+const RE=[['Corto plazo (0 a 1 año)','#3ddc97',['Monitorear cada mes precios, fletes y nivel del río.','Programar embarques fuera del estiaje.','Usar IA solo para organizar, con validación humana.']],['Mediano plazo (1 a 3 años)','#f5a524',['Contratos de mediano plazo con importadores paraguayos.','Volumen exportable estable acordado con YPFB.','Reducir la concentración en Brasil.']],['Largo plazo (3 a 5 años)','#5b9bff',['Sistema permanente de inteligencia de mercados.','Mejoras logísticas y alternativas de transporte.']]];
+function ct(k){$('#ct').innerHTML=['Conclusiones','Recomendaciones'].map((t,i)=>`<button aria-pressed="${i===k}" data-k="${i}">${t}</button>`).join('');$('#ct').querySelectorAll('button').forEach(b=>b.onclick=()=>ct(+b.dataset.k));
+$('#cv').innerHTML=k?`<div class="tl">${RE.map(r=>`<div style="--c:${r[1]}"><h4>${r[0]}</h4><ul>${r[2].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div>`:`<div class="cc">${CO.map((c,i)=>`<details ${i?'':'open'}><summary>${c[0]}</summary><p>${c[1]}</p></details>`).join('')}</div>`}
+ct(0);
+</script>
+</body>
+</html>
